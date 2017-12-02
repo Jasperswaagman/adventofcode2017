@@ -2,7 +2,7 @@ with open ('input', 'r') as f:
   captcha = f.readlines()
   captcha = captcha[0].strip()
 
-half_captcha = int(len(captcha) / 2)
+half_captcha = len(captcha) // 2
 captcha += captcha[0:half_captcha]
 total = 0
 
