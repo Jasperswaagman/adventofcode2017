@@ -10,7 +10,6 @@ def double(s):
   for w in s.split():
     if w in seen: return
     seen.add(w)
-
   n += 1 
 
 for l in passphrases:
