@@ -3,10 +3,8 @@ with open('smallinput', 'r') as f:
   passphrases = f.readlines()
 
 passphrases = [r.strip() for r in passphrases]
-n = 0
 
 def has_double(s):
-  global n
   seen = set()
   for w in s:
     if w in seen: return
