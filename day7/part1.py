@@ -1,7 +1,18 @@
 with open('input') as f:
   program = [l.strip() for l in f.readlines()]
+  t = [p.split() for p in program]
 
-[print(p) for p in program]
+# we don't need the weight for now
+for _ in t:
+  del _[1]
 
-# we put every program in a long list: A dict with the program name and weight
-# Then we go through the list again and for every name we see that is ontop of another program we add that one to the dict of the program below it
+n = []
+for x in t:
+  n.append(x[0])
+
+for _ in t:
+  if len(_) > 1:
+    for p in _[2:]:
+      n.remove(p.rstrip(','))
+
+print(n[0])
